@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>중고로운 평화나라</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+    .notosans{font-family: 'Noto Sans KR', sans-serif;}
+    @font-face {
+      font-family: 'TmonMonsori';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    *{box-sizing: border-box;}
+    html,body{margin: 0; font-family: "TmonMonsori", sans-serif; font-weight: normal;}
+    html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,
+    acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,article,aside,
+    hgroup,header,footer,figure,figcaption,nav,section {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      vertical-align: baseline;
+    }
+    ol,ul {list-style: none;}
+    button,input,optgroup,select,textarea {
+      font-family: inherit;
+      margin: 0;
+      outline: none;
+      box-shadow: none;
+      background: none;
+    }
+    input:focus,button:focus,textarea:focus,select:focus {
+      outline: none;
+    }
+    button,[type='button'],[type='reset'],[type='submit'] {
+      padding: 0;
+      line-height: inherit;
+      color: inherit;
+      border: 0;
+      background-color: transparent;
+      background-image: none;
+      cursor: pointer;
+    }
+    a{text-decoration: none;}
+    img{width: 100%;vertical-align: top;}
+
+    .header{position: fixed;left: 0;top: 0;right: 0;height: 61px;background: #653CFC;padding: 0 13px;}
+    .header .gnb{display: flex;align-items: center;height: 100%;justify-content: flex-end;gap: 10px;}
+    .container{background: #653CFC url(./images/page1_bg.png) center no-repeat;width: 100%;height: 100vh;display: flex; flex-direction: column;align-items: center;justify-content: center;padding-top: 61px;box-sizing: border-box;}
+    .container .sub_title{font-weight: 900;font-size: 36px;line-height: 45px;color: #F7DF34;text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;}
+    .container .title{font-weight: 900;font-size: 96px;line-height: 120px;text-align: center;color: #F2C94C;text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;position: relative;width: 348px;transform: translate(7.5px, 6.5px);margin-top: 22px;}
+    .container .title .shadow{position: absolute;left: 50%; top: 50%;transform: translate(calc(-50% - 17px), calc(-50% - 13px));display: block;width: 348px;color: #FFFFFF;}
+    .container .btn_start{margin-top: 108px;font-weight: 900;font-size: 36px;line-height: 45px;color: #FFFFFF;text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <ul class="gnb">
+        <li><img src="./images/nav1.png" alt=""></li>
+        <li><img src="./images/nav2.png" alt=""></li>
+        <li><img src="./images/nav3.png" alt=""></li>
+      </ul>
+    </header>
+    <div class="container">
+      <p class="sub_title">오늘도</p>
+      <h1 class="title">중고로운<br>
+        평화나라
+      <span class="shadow">중고로운<br>
+        평화나라</span>
+      </h1>
+        
+      <a href="./page2.html" class="btn_start">GAME - START</a>
+    </div>
+  </div>
+</body>
+</html>

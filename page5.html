@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>중고로운 평화나라</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Tomorrow&display=swap');
+    .notosans{font-family: 'Noto Sans KR', sans-serif;}
+    @font-face {
+      font-family: 'TmonMonsori';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'JSongMyung';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/JSongMyung-Regular-KO.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    *{box-sizing: border-box;}
+    html,body{margin: 0; font-family: "TmonMonsori", sans-serif; font-weight: normal;}
+    html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,
+    acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,article,aside,
+    hgroup,header,footer,figure,figcaption,nav,section {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      vertical-align: baseline;
+    }
+    ol,ul {list-style: none;}
+    button,input,optgroup,select,textarea {
+      font-family: inherit;
+      margin: 0;
+      outline: none;
+      box-shadow: none;
+      background: none;
+    }
+    input:focus,button:focus,textarea:focus,select:focus {
+      outline: none;
+    }
+    button,[type='button'],[type='reset'],[type='submit'] {
+      padding: 0;
+      line-height: inherit;
+      color: inherit;
+      border: 0;
+      background-color: transparent;
+      background-image: none;
+      cursor: pointer;
+    }
+    a{text-decoration: none;}
+    img{width: 100%;vertical-align: top;}
+    .blind{	position: absolute;clip: rect(0 0 0 0);width: 1px;height: 1px;margin: -1px;overflow: hidden;	}
+    .wrap{min-width: 1440px;overflow: hidden;}
+    .header{position: fixed;left: 0;top: 0;right: 0;height: 61px;background: #653CFC;padding: 0 13px;z-index: 100;}
+    .header .gnb{display: flex;align-items: center;height: 100%;justify-content: flex-end;gap: 10px;}
+    .container{text-align: center;padding-top: 61px;box-sizing: border-box;}
+  
+    .sec01{background: linear-gradient(180deg, rgba(102, 61, 253, 0) 0%,#663DFD 100%);}
+    .sec01 .sec01_01{position: relative;height: 900px;animation: scaleAni 0.5s ease-in 0.1s;display: flex;align-items: center;justify-content: center;flex-direction: column;}
+    .sec01 .sec01_01 .box_img{position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);width: 1440px;}
+    .sec01 .sec01_01 .title{position: relative;z-index: 1;text-align: center;font-weight: 500;font-size: 96px;line-height: 96px;font-family: 'JSongMyung';color: #fff;text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;}
+    .sec01 .sec01_01 .desc{position: relative;font-weight: 500;font-size: 24px;line-height: 35px;font-family: 'Noto Sans KR';color: #F2C94C;text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;}
+    .sec01 .sec01_01 .desc .shadow{position: absolute;left: 50%;top: 0;transform: translate(-50%, -2px);width: max-content;color: #fff;}
+    .sec01 .sec01_02{padding: 102px 0 637px;background:url(./images/page5_sec01_02_bg.png) bottom 170% center no-repeat;}
+    .sec01 .sec01_02 .dot_list{display: flex;flex-direction: column;gap:124px;justify-content: center;align-items: center;}
+    .sec01 .sec01_02 .dot_list .dot{width: 20px;height: 20px;border-radius: 50%;}
+    .sec01 .sec01_02 .dot_list .dot:nth-child(1){background: #fff;}
+    .sec01 .sec01_02 .dot_list .dot:nth-child(2){background: rgba(102, 61, 253, 0.51);}
+    .sec01 .sec01_02 .dot_list .dot:nth-child(3){background: #663DFD;}
+    .sec01 .sec01_02 .text{margin: 144px 0 70px;position: relative;font-weight: 900;font-size: 48px;line-height: 60px;color: #fff;}
+    .sec01 .sec01_02 .text .shadow{position: absolute;left: 50%;top: 0;transform: translate(-50%, -6px);color: #673EFE;}
+    .sec01 .sec01_02 .title{position: relative;font-weight: 900;font-size: 96px;line-height: 120px;color: #F2C94C;text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;display: flex;align-items: center;justify-content: center;}
+    .sec01 .sec01_02 .title .shadow{position: absolute;left: 50%;top: 0;transform: translate(-50%, -10px);color: #fff;width: max-content;}
+    .sec01 .sec01_02 .title .shadow .point{background: #F8DF35;padding-top: 5px;}
+    .sec01 .sec01_02 .title:last-child{margin-top: 10px;}
+    .sec01 .sec01_02 .title:last-child:before, .sec01 .sec01_02 .title:last-child:after{display: inline-block;content:'';width: 87px;height: 28px;background: #F8DF35;margin: 0 4px;}
+    .sec02{background: #FFFFFF;box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);border-radius: 100px;width: 100%;padding: 81px 83px 98px 144px;margin-top: -100px;display: flex;align-items: center;justify-content: space-between;position: relative;}
+    .sec02:before{width: 452.02px;height: 406.6px;content:'';display: block;background: url(./images/page5_sec02_img1.png) center no-repeat;left: -20px;position: absolute;top: -254px;}
+    .sec02:after{width: 490.77px;height: 482.37px;content:'';display: block;background: url(./images/page5_sec02_img1.png) center no-repeat;right: -121px;position: absolute;bottom: -254px;}
+    .sec02 .box_text{display: block;font-weight: 900;font-size: 96px;color: #673FFE;line-height: 120px;text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
+    .sec02 .box_text .text{width: 465px;display: flex;align-items: center;}
+    .sec02 .box_text .text:after{content:'';display: block;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);background: #653DF9;flex:1 0 auto;margin-left: 5px;height: 16px;}
+    .sec02 .box_text .text:nth-child(3):after{display: none;}
+    .sec02 .box_img{width: 531px;background: #F8DF35;box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);border-radius: 100px;height: 568px;overflow: hidden;position: relative;}
+    .sec02 .box_img img{position: absolute;top: 69px;right: 79px;}
+    .sec03 {padding: 262px 0 98px;}
+    .sec03 .list{display: flex;flex-wrap: wrap;justify-content: center;gap: 107px 130px}
+    .sec03 .item{width: 50%;max-width: 591px;}
+    .sec03 .title{position: relative;font-weight: 900;font-size: 48px;line-height: 60px;color: #F8DF35;display: block;}
+    .sec03 .title .shadow{position: absolute;left: 50%;transform: translate(-50%, -6px);color: #673EFE;width: max-content  ;}
+    .sec04{height: 570px;display: flex;align-items: center;justify-content: center;background: linear-gradient(180deg, rgba(101, 60, 252, 0) 0%, #653CFC 150%);}
+    .sec04 .title{font-weight: 900;font-size: 48px;line-height: 60px;color: #7D5AFC;position: relative;}
+    .sec04 .title .shadow{position: absolute;left: 50%;transform: translate(-50%, -5px);color: #fff;width: max-content  ;}
+
+    .sec05 {height: 900px;display: flex;align-items: center;justify-content: center;background: #653CFC url(./images/page5_sec05_bg.png) center/cover no-repeat;}
+    .sec05  .title{font-weight: 900;font-size: 128px;line-height: 160px;color: #000;text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;position: relative;}
+    .sec05  .title .shadow{position: absolute;left: 50%;top: 50%;transform: translate(calc(-50% - 7px), calc(-50% - 9px));color: #fff;width: max-content;}
+
+    .sec06{background: #F8E035;display: flex;justify-content: space-between;padding: 95px 12px 70px;}
+    .sec06 .title{font-weight: 900;font-size: 48px;line-height: 60px;color: #fff;position: relative;text-align: left;}
+    .sec06 .title .shadow{position: absolute;left: 50%;top:0; transform: translate(-50%, -5px);color: #653CFC;width: max-content;}
+    .sec07{background: url(./images/page5_sec07_bg.png) top center/100% no-repeat;padding: 391px;}
+    .sec07 .box_img{width: 529px;margin: 0 auto;}
+    .sec07 .title{font-weight: 900;font-size: 64px;line-height: 80px;color: #F8E035;position: relative;text-align: left;text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.58);width: 824px;margin: 0 auto;display: flex;align-items: center;}
+    .sec07 .title .shadow{position: absolute;left: 50%;top:0; transform: translate(-50%, -5px);color: #653CFC;width: max-content;display: block;width: 824px;text-shadow: none;}
+    .sec07 .title:first-of-type:after{content:'';display: block;height: 16px;background: #653CFC;flex: 1;}
+    .sec07 .btn{display: inline-flex;align-items: center;justify-content: center;width: 383px;height: 137px;background: #653CFC;box-shadow: 0px 13px 4px rgba(0, 0, 0, 0.25);border-radius: 40px;font-weight: 900;font-size: 64px;line-height: 80px;color: #F7DF34;text-shadow: -2px 0 #1D0088, 0 2px #1D0088, 2px 0 #1D0088, 0 -2px #1D0088;margin-top: 163px;}
+    @keyframes scaleAni {
+      0%{
+        transform: scale(0.5);
+      }
+      100%{
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <ul class="gnb">
+        <li><img src="./images/nav1.png" alt=""></li>
+        <li><img src="./images/nav2.png" alt=""></li>
+        <li><img src="./images/nav3.png" alt=""></li>
+      </ul>
+    </header>
+    <div class="container">
+      <section class="sec01">
+        <article class="sec01_01">
+          <div class="box_img">
+            <img src="./images/page5_sec01_bg.png" alt="">
+          </div>
+          <h1 class="title">X발!!!</h1>
+          <p class="desc">
+            그렇게 물건을 보내고 난 후,<br>
+            이때까지 연락이 잘되던 상추맘의 연락이 끊겼다.<br>
+            이제는 휴대폰 전화마저 받지 않다가 전원이 꺼졌다.<br>
+            머리가 아프다...
+            <span class="shadow">
+              그렇게 물건을 보내고 난 후,<br>
+            이때까지 연락이 잘되던 상추맘의 연락이 끊겼다.<br>
+            이제는 휴대폰 전화마저 받지 않다가 전원이 꺼졌다.<br>
+            머리가 아프다...
+            </span>
+          </p>
+        </article>
+        <article class="sec01_02">
+          <ul class="dot_list">
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+          </ul>
+          <p class="text">
+            그렇습니다<br>당신은
+            <span class="shadow">그렇습니다<br>당신은</span>
+          </p>
+          <h2 class="title">
+            신종 퀵사기 수법에
+            <span class="shadow"> <span class="point">신종 퀵사기</span> 수법에</span>
+          </h2>
+          <h2 class="title">
+            당하셨습니다!
+            <span class="shadow">당하셨습니다!</span>
+          </h2>
+        </article>
+      </section>
+      <section class="sec02">
+        <div class="box_text">
+          <p class="text">그리하여</p>
+          <p class="text">준비한</p>
+          <p class="text">신종 사기꾼</p>
+          <p class="text">거르는 법</p>
+        </div>
+        <div class="box_img">
+          <img src="./images/page5_sec02_img2.png" alt="">
+        </div>
+      </section>
+      <section class="sec03">
+        <ul class="list">
+          <li class="item">
+            <div class="box_img">
+              <img src="./images/page5_sec03_img1.png" alt="">
+            </div>
+            <strong class="title">1. 계좌명 확인하기
+              <span class="shadow">1. 계좌명 확인하기</span>
+            </strong>
+          </li>
+          <li class="item">
+            <div class="box_img">
+              <img src="./images/page5_sec03_img2.png" alt="">
+            </div>
+            <strong class="title">2. 은행 점검시간 피하기
+              <span class="shadow">2. 은행 점검시간 피하기</span>
+            </strong>
+          </li>
+          <li class="item">
+            <div class="box_img">
+              <img src="./images/page5_sec03_img3.png" alt="">
+            </div>
+            <strong class="title">3. 더치트 어플 검색
+              <span class="shadow">3. 더치트 어플 검색</span>
+            </strong>
+          </li>
+          <li class="item">
+            <div class="box_img">
+              <img src="./images/page5_sec03_img4.png" alt="">
+            </div>
+            <strong class="title">4. 사기 피해 사이트 정독
+              <span class="shadow">4. 사기 피해 사이트 정독</span>
+            </strong>
+          </li>
+        </ul>
+      </section>
+      <section class="sec04">
+        <h2 class="title">그리고...
+          <span class="shadow">그리고...</span>
+        </h2>
+      </section>
+      <section class="sec05">
+        <h2 class="title">
+          절대로<br>
+          물건 먼저<br>
+          보내지 않기
+          <span class="shadow">
+            절대로<br>
+          물건 먼저<br>
+          보내지 않기
+          </span>
+        </h2>
+      </section>
+      <section class="sec06">
+        <h2 class="title">
+          이 방법만 아셔도<br>
+          여러분은 악독한 사기꾼과<br>
+          마주하지 않고 즐거운<br>
+          중고거래 라이프를<br>
+          즐기실 수 있습니다 ^^
+          <span class="shadow">
+            이 방법만 아셔도<br>
+          여러분은 악독한 사기꾼과<br>
+          마주하지 않고 즐거운<br>
+          중고거래 라이프를<br>
+          즐기실 수 있습니다 ^^
+          </span>
+        </h2>
+        <div class="box_img">
+          <img src="./images/page5_sec06_img.png" alt="">
+        </div>
+      </section>
+      <section class="sec07">
+        <div class="box_img">
+          <img src="./images/page5_sec07_img.png" alt="">
+        </div>
+        <h2 class="title">
+          자,
+          <span class="shadow">자,</span>
+        </h2>
+        <h2 class="title">
+          다시 게임을 시작하시겠습니까?
+          <span class="shadow">다시 게임을 시작하시겠습니까?</span>
+        </h2>
+        <a href="./page1.html" class="btn">REPLAY</a>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

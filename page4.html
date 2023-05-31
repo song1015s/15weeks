@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>중고로운 평화나라</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Tomorrow&display=swap');
+    .notosans{font-family: 'Noto Sans KR', sans-serif;}
+    @font-face {
+      font-family: 'TmonMonsori';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    *{box-sizing: border-box;}
+    html,body{margin: 0; font-family: "TmonMonsori", sans-serif; font-weight: normal;}
+    html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,
+    acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,article,aside,
+    hgroup,header,footer,figure,figcaption,nav,section {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      vertical-align: baseline;
+    }
+    ol,ul {list-style: none;}
+    button,input,optgroup,select,textarea {
+      font-family: inherit;
+      margin: 0;
+      outline: none;
+      box-shadow: none;
+      background: none;
+    }
+    input:focus,button:focus,textarea:focus,select:focus {
+      outline: none;
+    }
+    button,[type='button'],[type='reset'],[type='submit'] {
+      padding: 0;
+      line-height: inherit;
+      color: inherit;
+      border: 0;
+      background-color: transparent;
+      background-image: none;
+      cursor: pointer;
+    }
+    a{text-decoration: none;}
+    img{width: 100%;vertical-align: top;}
+    .blind{	position: absolute;clip: rect(0 0 0 0);width: 1px;height: 1px;margin: -1px;overflow: hidden;	}
+    .wrap{min-width: 1440px;overflow: hidden;}
+    .header{position: fixed;left: 0;top: 0;right: 0;height: 61px;background: #653CFC;padding: 0 13px;z-index: 100;}
+    .header .gnb{display: flex;align-items: center;height: 100%;justify-content: flex-end;gap: 10px;}
+    .container{text-align: center;padding-top: 61px;box-sizing: border-box;}
+  
+    .sec01{background: #663DFD;}
+    .sec01 .box_img{width: 1440px;margin: 0 auto;padding-top: 56px;}
+    .sec02{background: #fff url(./images/page4_sec02_bg.png) bottom 860px center/100% no-repeat;padding-top: 50px;}
+    .sec02 .title{font-weight: 900;font-size: 64px;line-height: 80px;color: #fff;text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;}
+    .sec02 .box_img{width: 994px;margin:100px auto;}
+    .sec02 .dot_list{display: flex;justify-content: center;gap:38px;}
+    .sec02 .dot{width: 14px;height: 14px;border-radius: 50%;background: #F2C94C;}
+    .sec02 .box_img_wrap{position: relative;}
+    .sec02 .box_img_woman{width: 1310px;margin: 0 auto}
+    .sec02 .info_list{display: flex;width: 1176px;flex-wrap:wrap;justify-content: space-between;position: absolute;left: 50%;
+    top: 50%;transform: translate(-50%,-50%);gap: 141px 722px;}
+    .sec02 .info_item{width: 227px;height: 227px;border-radius: 50%;background: #F8DF35;display: flex;align-items: center;justify-content: center;font-weight: 900;
+font-size: 36px;line-height: 45px;color: #663DFD;position: relative;}
+    .sec02 .info_item .shadow{position: absolute;left: 50%;top: 50%;transform: translate(calc(-50% - 6px), calc(-50% - 4px));color: #fff;width: max-content;}
+    .sec02 .box_img_chat{width: 978px;margin:0 auto;background: #fff;position: relative;}
+    .sec02 .text{font-weight: 900;font-size: 36px;line-height: 45px;color: #F8DF35;position: absolute;bottom: 83px;z-index: 1;width: max-content;left: 50%;transform: translateX(-50%);}
+    .sec02 .text .shadow{position: absolute;left: 50%;top: 0;transform: translate(-50%, -5px);color: #663DFD;width: max-content;}
+
+    .sec03{padding: 193px 0 335px; background: linear-gradient(180deg,  rgba(101, 60, 252, 0) 30%, #653CFC 100%);}
+    .sec03 .title{position: relative;font-weight: 900;font-size: 64px;line-height: 80px;text-shadow: 0px 6px 4px #653CFC;color: #F8DF35;}
+    .sec03 .box_btn{margin-top: 162px;display: flex;align-items: center;justify-content: center;gap: 90px}
+    .sec03 .box_btn .btn{display: inline-flex;align-items: center;justify-content: center;width: 383px;height: 137px;background: #fff;box-shadow: 0px 13px 4px rgba(0, 0, 0, 0.25);border-radius: 40px;font-weight: 900;font-size: 64px;line-height: 80px;color: #F7DF34;text-shadow: -2px 0 #1D0088, 0 2px #1D0088, 2px 0 #1D0088, 0 -2px #1D0088;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <ul class="gnb">
+        <li><img src="./images/nav1.png" alt=""></li>
+        <li><img src="./images/nav2.png" alt=""></li>
+        <li><img src="./images/nav3.png" alt=""></li>
+      </ul>
+    </header>
+    <div class="container">
+      <section class="sec01">
+        <div class="box_img">
+          <img src="./images/page4_sec01_img.png" alt="">
+          <ul class="blind">
+            <li>상추맘: 혹시 구매 가능할까요 ^^?</li>
+            <li>보낸 사람: 네 가능합니다!</li>
+            <li>상추맘: 제가 시누이 선물을 그걸로 할려고 해서 급한테 퀵 배송으로 가능할까요?</li>
+            <li>상추맘: 카카오퀵으로 부를 거라서 의심 되시면 취소하시면 돼요</li>
+            <li>상추맘: 물건 보내시고 제 카카오퀵 앱으로 물건 수령 알람 뜨면 입금 바로 해드릴게요!</li>
+          </ul>
+        </div>
+      </section>
+      <section class="sec02">
+        <h2 class="title">??? 퀵이라...<br>그래도 혹시나 돈을 못 받으면 어떡하지?</h2>
+        <div class="box_img">
+          <img src="./images/page4_sec02_img.png" alt="상추맘 프로필 사진">
+        </div>
+        <ul class="dot_list">
+          <li class="dot"></li>
+          <li class="dot"></li>
+          <li class="dot"></li>
+        </ul>
+        <div class="box_img_wrap">
+          <div class="box_img_woman">
+            <img src="./images/page4_sec02_woman.png" alt="생각하고 있는 여자">
+          </div>
+          <ul class="info_list">
+            <li class="info_item">대기업<br>계열사<span class="shadow">대기업<br>계열사</span></li>
+            <li class="info_item">가족사진<br>배경화면<span class="shadow">가족사진<br>배경화면</span></li>
+            <li class="info_item">아기 엄마<span class="shadow">아기 엄마</span></li>
+            <li class="info_item">한국 사람<span class="shadow">한국 사람</span></li>
+          </ul>
+        </div>
+        <div class="box_img_chat">
+          <img src="./images/page4_sec02_chat.png" alt="주소 채팅">
+          <p class="text">정확한 집주소까지...<br>잠시 전화를 걸어 젊은 여성인 것까지 확인했다...
+            <span class="shadow">정확한 집주소까지...<br>잠시 전화를 걸어 젊은 여성인 것까지 확인했다...</span>
+          </p>
+        </div>
+      </section>
+      <section class="sec03">
+        <h2 class="title">한<br>번<br><br>믿<br>어<br>볼<br>까<br>?
+        </h2>
+        <div class="box_btn">
+          <a href="./page5.html" class="btn">거래한다</a>
+          <a href="#" class="btn">굶어죽는다</a>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

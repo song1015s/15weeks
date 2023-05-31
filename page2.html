@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>중고로운 평화나라</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+    .notosans{font-family: 'Noto Sans KR', sans-serif;}
+    @font-face {
+      font-family: 'TmonMonsori';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    *{box-sizing: border-box;}
+    html,body{margin: 0; font-family: "TmonMonsori", sans-serif; font-weight: normal;}
+    html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,
+    acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,article,aside,
+    hgroup,header,footer,figure,figcaption,nav,section {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      vertical-align: baseline;
+    }
+    ol,ul {list-style: none;}
+    button,input,optgroup,select,textarea {
+      font-family: inherit;
+      margin: 0;
+      outline: none;
+      box-shadow: none;
+      background: none;
+    }
+    input:focus,button:focus,textarea:focus,select:focus {
+      outline: none;
+    }
+    button,[type='button'],[type='reset'],[type='submit'] {
+      padding: 0;
+      line-height: inherit;
+      color: inherit;
+      border: 0;
+      background-color: transparent;
+      background-image: none;
+      cursor: pointer;
+    }
+    a{text-decoration: none;}
+    img{width: 100%;vertical-align: top;}
+    .wrap{min-width: 1440px;overflow: hidden;}
+    .header{position: fixed;left: 0;top: 0;right: 0;height: 61px;background: #653CFC;padding: 0 13px;z-index: 100;}
+    .header .gnb{display: flex;align-items: center;height: 100%;justify-content: flex-end;gap: 10px;}
+    .container{text-align: center;padding-top: 61px;box-sizing: border-box;}
+    .sec01{background: linear-gradient(180deg, #000237 0%, #F7DF34 100%);height: 100vh;display: flex;align-items: center;justify-content: center;}
+    .sec01 .desc{font-weight: 900;font-size: 36px;line-height: 45px;text-align: center;color: #FFFFFF;text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;}
+    .sec01 .desc .point{color: #F7DF34;font-style: normal;}
+    .sec02{background: #F7DF34;text-align: left;position: relative;}
+    .sec02 .box_title{padding: 10px 92px}
+    .sec02 .title{font-weight: 900;font-size: 96px;line-height: 120px;color: #653CFC;text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;position: relative;}
+    .sec02 .title .shadow{position: absolute;left: 0; top: 0;transform: translate(-17px, -13px);display: block;color: #FFFFFF;}
+    .sec02 .desc{color: #653CFC;font-weight: 900;font-size: 36px;line-height: 45px;}
+    .sec02 .desc:after{content:'';width: 126px;background: #653CFC;height: 9px;display: inline-block;vertical-align: middle;margin-left: 20px;}
+    .sec02 .img_box{margin-top: 148px;text-align: right;padding: 0 50px;position: relative;z-index: 1;}
+    .sec02 .img_box:before{position: absolute;width: 792px;height: 768px;border-radius: 50%;filter: blur(15px);background: #fff;content:'';display: block;right: 7px;bottom: -141px;}
+    .sec02 .img_box > img{width: 707px;height: 714px;position: relative;z-index: 1;}
+    .sec02 .img_box .sparkle01{display: block;position: absolute;right: 470px;top: 7px; width: 446px;height: 446px;}
+    .sec02 .img_box .sparkle02{display: block;position: absolute;right: 470px;bottom: -108px; width: 446px;height: 446px;}
+    .sec02 .img_box .sparkle03{display: block;position: absolute;right: 0;bottom: 31px; width: 276px;height: 276px;}
+    .sec02 .text{padding: 0 221px;font-weight: 900;font-size: 48px;line-height: 60px;color: #653CFC;position: relative;z-index: 1;}
+    .sec02 .text:last-child:before{content:'';display: inline-block;width: 445px;height: 9px;background: #653CFC;vertical-align: middle;}
+    .sec02:after{content:'';display: block;background: #F7DF34;filter: blur(15px);width: 110%;height: 948px;border-radius: 50%;bottom: -324px;position: absolute;left: 50%;transform: translateX(-50%);}
+    .sec03{background: #653CFC;padding: 464px 0 282px;}
+    .sec03 .text{font-style: normal;font-weight: 900;font-size: 57px;line-height: 71px;color: #fff;text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;}
+    .sec03 .title{font-weight: 900;font-size: 64px;line-height: 80px;text-align: center;color: #F2C94C;text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;position: relative;transform: translate(2.5px, 2.5px);margin-top: 30px;}
+    .sec03 .title .shadow{position: absolute;left: 50%; top: 50%;transform: translate(calc(-50% - 5px), calc(-50% - 5px));display: block;color: #FFFFFF;}
+    .sec03 .box_btn{margin-top: 90px;display: flex;align-items: center;justify-content: center;gap: 90px}
+    .sec03 .box_btn .btn{display: inline-flex;align-items: center;justify-content: center;width: 383px;height: 137px;background: #fff;box-shadow: 0px 13px 4px rgba(0, 0, 0, 0.25);border-radius: 40px;font-weight: 900;font-size: 64px;line-height: 80px;color: #F7DF34;text-shadow: -2px 0 #1D0088, 0 2px #1D0088, 2px 0 #1D0088, 0 -2px #1D0088;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <ul class="gnb">
+        <li><img src="./images/nav1.png" alt=""></li>
+        <li><img src="./images/nav2.png" alt=""></li>
+        <li><img src="./images/nav3.png" alt=""></li>
+      </ul>
+    </header>
+    <div class="container">
+      <section class="sec01">
+        <strong class="desc">평화로운 어느날<br>.<br>.<br>.<br><br>당신은 당장 돈이 없어<br>지갑에 단돈 <em class="point">200</em>원 밖에 없습니다.</strong>
+      </section>
+      <section class="sec02">
+        <div class="box_title">
+          <h1 class="title">거지가 된 당신<span class="shadow">거지가 된 당신</span></h1>
+          <p class="desc">당장 굶어죽을 날만 기다리다</p>
+        </div>
+        <div class="img_box">
+          <img src="./images/page2_img1.png" alt="">
+          <span class="sparkle01">
+            <img src="./images/page2_img2.png" alt="">
+          </span>
+          <span class="sparkle02">
+            <img src="./images/page2_img2.png" alt="">
+          </span>
+          <span class="sparkle03">
+            <img src="./images/page2_img2.png" alt="">
+          </span>          
+        </div>
+        <p class="text">장롱에 고이 모셔놨던 가방이 </p>
+        <p class="text"> 머릿속을 스쳐갑니다. . . </p>
+      </section>
+      <section class="sec03">
+        <p class="text">당장 200원 밖에 없어<br>굶어 죽게된 당신,</p>
+        <h2 class="title">어떤 선택을 하시겠습니까?<span class="shadow">어떤 선택을 하시겠습니까?</span></h2>
+        <div class="box_btn">
+          <a href="./page3.html" class="btn">판매한다</a>
+          <a href="#" class="btn">굶어죽는다</a>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

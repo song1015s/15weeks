@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>중고로운 평화나라</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Tomorrow&display=swap');
+    .notosans{font-family: 'Noto Sans KR', sans-serif;}
+    @font-face {
+      font-family: 'TmonMonsori';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    *{box-sizing: border-box;}
+    html,body{margin: 0; font-family: "TmonMonsori", sans-serif; font-weight: normal;}
+    html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,
+    acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,article,aside,
+    hgroup,header,footer,figure,figcaption,nav,section {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      vertical-align: baseline;
+    }
+    ol,ul {list-style: none;}
+    button,input,optgroup,select,textarea {
+      font-family: inherit;
+      margin: 0;
+      outline: none;
+      box-shadow: none;
+      background: none;
+    }
+    input:focus,button:focus,textarea:focus,select:focus {
+      outline: none;
+    }
+    button,[type='button'],[type='reset'],[type='submit'] {
+      padding: 0;
+      line-height: inherit;
+      color: inherit;
+      border: 0;
+      background-color: transparent;
+      background-image: none;
+      cursor: pointer;
+    }
+    a{text-decoration: none;}
+    img{width: 100%;vertical-align: top;}
+    .wrap{min-width: 1440px;overflow: hidden;}
+    .header{position: fixed;left: 0;top: 0;right: 0;height: 61px;background: #653CFC;padding: 0 13px;z-index: 100;}
+    .header .gnb{display: flex;align-items: center;height: 100%;justify-content: flex-end;gap: 10px;}
+    .container{text-align: center;padding-top: 61px;box-sizing: border-box;}
+  
+    .sec01{background: linear-gradient(180deg, #F7DF34 95%, #653CFC 100%);height: 933px;position: relative;}
+    .sec01 .box_img{width: 1003px;height: 819px;position: absolute;left: 50%;bottom:0;z-index: 1;transform: translateX(-80%);}
+    .sec01 .box_img img{height: 100%;object-fit: cover;}
+    .sec01 .speech{width: 943px;height: 610px;background: url(./images/page3_sec01_img2.png) center/cover no-repeat;position: absolute;left: 50%;top: 114px;text-align: right;padding: 123px 99px;box-sizing: border-box;transform: translateX(-30%);}
+    .sec01 .speech .box_title{position: relative;}
+    .sec01 .speech .title, .speech .shadow{font-weight: 900;font-size: 64px;line-height: 80px;text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;color: #653CFC;display: block;}
+    .sec01 .speech .title span, .speech .shadow span{font-weight: 900;font-size: 36px;line-height: 45px;color: #653CFC;padding-left: 13px;}
+    .sec01 .speech .shadow{position: absolute;right: 0;top: 0;color: #fff;transform: translate(-6px, -4px);}
+    .sec01 .speech .shadow span{color: #fff;}
+    .sec01 .speech .desc{font-weight: 400;font-size: 28px;line-height: 34px;color: #653CFC;font-family: 'Tomorrow';padding-top: 14px;}
+    .sec01 .speech .desc .point{font-style: normal;background: #F7DF34;color: #653CFC;}
+    .sec02{background: linear-gradient(180deg, #653CFC 80%, rgba(0, 0, 0, 0) 100%);height: 1172px;}
+    .sec02 .inner{background: url(./images/page3_sec02_bg.png) center no-repeat;height: 100%;display: flex;
+    flex-direction: column;align-items: center;padding-top: 160px;}
+    .sec02 .circle{display: block;width: 20px;height: 20px;border-radius: 50%;background: #fff;margin-bottom: 88px;}
+    .sec02 .text{font-family: 'Tomorrow';font-style: normal;font-weight: 400;font-size: 64px;line-height: 77px;color: #fff;}
+    .sec02 .text:first-of-type{margin-bottom: 28px;}
+    .sec02 .text:nth-of-type(2){opacity: 0.6;}
+    .sec02 .text:nth-of-type(3){opacity: 0.3;}
+
+    .sec03{height: 1240px;background: url(./images/page3_sec03_bg.png) center/cover no-repeat;display: flex;align-items: center;justify-content: center;}
+
+    .sec04{padding: 47px 0 385px;}
+    .sec04 .text{color: #653CFC;font-weight: 900;font-size: 64px;line-height: 80px;margin-bottom: 204px;}
+    .sec04 .title{font-weight: 900;font-size: 64px;line-height: 80px;text-align: center;color: #F2C94C;position: relative;white-space: nowrap;}
+    .sec04 .title .shadow{position: absolute;left:50%; top: 0;;display: block;color: #653CFC;transform: translate(-50%, -8px);}
+    .sec04 .desc{padding-top: 23px;color: #653CFC;font-weight: 400;font-size: 33px;line-height: 40px;font-family: 'Tomorrow';}
+    .sec04 .box_btn{margin-top: 142px;display: flex;align-items: center;justify-content: center;gap: 90px}
+    .sec04 .box_btn .btn{display: inline-flex;align-items: center;justify-content: center;width: 383px;height: 137px;background: #653CFC;box-shadow: 0px 13px 4px rgba(0, 0, 0, 0.25);border-radius: 40px;font-weight: 900;font-size: 64px;line-height: 80px;color: #F7DF34;text-shadow: -2px 0 #1D0088, 0 2px #1D0088, 2px 0 #1D0088, 0 -2px #1D0088;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <ul class="gnb">
+        <li><img src="./images/nav1.png" alt=""></li>
+        <li><img src="./images/nav2.png" alt=""></li>
+        <li><img src="./images/nav3.png" alt=""></li>
+      </ul>
+    </header>
+    <div class="container">
+      <section class="sec01">
+        <div class="box_img">
+          <img src="./images/page3_sec01_img1.png" alt="">
+        </div>
+        <div class="speech">
+          <div class="box_title">
+            <strong class="title">중고거래 사이트<span>에 접속한 당신,</span></strong>
+            <p class="shadow">중고거래 사이트<span>에 접속한 당신,</span></p>
+          </div>
+          <p class="desc">
+            당신의 가방은 <em class="point">1000,000,000W</em>의<br>
+            가격으로 중고 가격이 형성되어 있습니다.<br>
+            시세를 확인 후 두근거리는 마음으로 중고거래<br>
+            사이트에 접속한 뒤, 아끼는 가방을<br>
+            판매하는 게시물을 업로드 했습니다.
+          </p>
+        </div>
+      </section>
+      <section class="sec02">
+        <div class="inner">
+          <span class="circle"></span>
+          <span class="circle"></span>
+          <span class="circle"></span>
+          <p class="text">A few moments later</p>
+          <p class="text">A few moments later</p>
+          <p class="text">A few moments later</p>
+        </div>
+      </section>
+      <section class="sec03">
+        <div class="box_img">
+          <img src="./images/page3_sec03_img.png" alt="">
+        </div>
+      </section>
+      <section class="sec04">
+        <p class="text">!!!!!</p>
+        <h2 class="title">드디어 나의 메신저로<br>가방을 구매하겠다는 사람이 나타났다!
+          <span class="shadow">
+            드디어 나의 메신저로<br>가방을 구매하겠다는 사람이 나타났다!
+          </span>
+        </h2>
+        <p class="desc">이 기회를 놓칠 수 없지.</p>
+        <div class="box_btn">
+          <a href="./page4.html" class="btn">거래한다</a>
+          <a href="#" class="btn">꺼져 ^^</a>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>
